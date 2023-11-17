@@ -1,9 +1,8 @@
 #Programa CRUD con funcion de guardado en fichero
 
+
 #Declaracion
 lista=[]
-condicion = True
-
 
 #Funcion para insertar dato
 def Insertar():
@@ -31,26 +30,42 @@ def Buscar(nombre):
         else:
             i+=1
     return i
-               
+
+'''Función copia de seguridad, se encarga de copiar el contenido de la
+    lista en u fichero .txt 
+'''
+def GuardarLista():
+    archivo = open("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica4DI\\CopiaSeguridad.txt",'a')
+    archivo.write('\n'.join(map(str,lista)))
+    archivo.close()
+
+'''Función leer copia de seguridad, se encarga de leer el contenido del fichero
+    .txt 
+'''
+def LeerLista():
+    archivo = open("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica4DI\\CopiaSeguridad.txt",'r')         
+    lineas = archivo.readlines()
+    for i in range(0,len(lineas)):
+        print(lineas[i])
+
 #Bucle para que se pueda introducir los datos que se quieran
-while condicion:
-    respuesta="s"
-    if respuesta == "n":
-        condicion = False
-        
+while True:
+    print("Introduce una opcion\n1-Insertar\n2-Modificar\n3-Eliminar\n4-Buscar\n5-CopiaSeguridad\n6-LeerCopia\n7-Salir")
+    opcion = int(input())
+    if opcion == 1:
+        Insertar()
+    elif opcion == 2:
+        Modificar()
+    elif opcion == 3:
+        Eliminar(input())
+    elif opcion == 4:
+        Buscar(input("¿Que pelicula desea buscar"))
+    elif opcion == 5:
+        GuardarLista()
+    elif opcion == 6:
+        LeerLista()
     else:
-        print("Introduce una opcion\n1-Insertar\n2-Modificar\n3-Eliminar\n4-Buscar\n5-Salir")
-        opcion = int(input())
-        if opcion == 1:
-            Insertar()
-        elif opcion == 2:
-            Modificar()
-        elif opcion == 3:
-            Eliminar(input())
-        elif opcion == 4:
-            Buscar(input("¿Que pelicula desea buscar"))
-        else:
-            break      
+        break      
         
     
     
