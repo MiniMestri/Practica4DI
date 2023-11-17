@@ -47,7 +47,7 @@ def LeerLista():
     lineas = archivo.readlines()
     for i in range(0,len(lineas)):
         print(lineas[i])
-
+    archivo.close()
 #Bucle para que se pueda introducir los datos que se quieran
 while True:
     print("Introduce una opcion\n1-Insertar\n2-Modificar\n3-Eliminar\n4-Buscar\n5-CopiaSeguridad\n6-LeerCopia\n7-Salir")

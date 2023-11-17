@@ -1,3 +1,3 @@
-['avatar', '34', '2']
-['jurassic', '2000', '8']
-['hola', '3', '4']
+Esta funcion necesitará un parametro que será una cadena de texto y retornará un entero, que será la posición donde se encontra el dato 
+Comienza con un bucle while que se encargará de leer la lista desde la posicion 0 hasta la longitud de la lista, que la calculamos con la funcion len, O , utilizamos un operador logico, la variable encontrado sea True.
+Luego esta la estructura if else que se encarga de comprarar el dato introducido por parametro del usuario con la que hay en la lista multidimensional, en este caso la posicion 0 por defecto ya que el nombre se encontra en esa posicion, si es verdad, entra en la estructura, la variable encontrado es igual a True , imprime lo que hay en esa posicion y sale del bucle while, en caso contrario la variable i sumara 1 y seguira el bucle while
