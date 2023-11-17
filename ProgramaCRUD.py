@@ -57,9 +57,9 @@ while True:
     elif opcion == 2:
         Modificar()
     elif opcion == 3:
-        Eliminar(input())
+        Eliminar(input("¿Que pelicula desea eliminar?"))
     elif opcion == 4:
-        Buscar(input("¿Que pelicula desea buscar"))
+        Buscar(input("¿Que pelicula desea buscar?"))
     elif opcion == 5:
         GuardarLista()
     elif opcion == 6:
